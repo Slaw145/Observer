@@ -9,13 +9,13 @@ namespace AuctionEvents
             Auctioneer auctioner = new Auctioneer();
 
             Bidder bidder1 = new Bidder("Slawek");
-            auctioner.registerBidder(new NotifyObserver(bidder1.update));
+            auctioner.registerBidder(bidder1.update);
 
             Bidder bidder2 = new Bidder("Charlie");
-            auctioner.registerBidder(new NotifyObserver(bidder2.update));
+            auctioner.registerBidder(bidder2.update);
 
             Bidder bidder3 = new Bidder("Nidhi");
-            auctioner.registerBidder(new NotifyObserver(bidder3.update));
+            auctioner.registerBidder(bidder3.update);
 
             bidder1.giveNewPrice(123);
             bidder2.giveNewPrice(158);
