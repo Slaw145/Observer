@@ -6,28 +6,27 @@ namespace AuctionEvents
 {
     public class Bidder
     {
-        public string Name { get; set; }
+        private string name;
+        public double bidPrice;
 
         public Bidder(string name)
         {
-            Name = name;
+            this.name = name;
         }
-
-        private double BidPrice;
 
         public void update()
         {
-            Console.WriteLine(Name + " propose: " + BidPrice + "\n");
+            Console.WriteLine(name + " propose: " + bidPrice + "\n");
 
-            if (BidPrice > 450)
+            if (bidPrice > 450)
             {
-                Console.WriteLine("Sold!! " + Name);
+                Console.WriteLine("Sold!! " + name);
             }
         }
 
         public void giveNewPrice(double price)
         {
-            BidPrice = price;
+            bidPrice = price;
         }
     }
 }
