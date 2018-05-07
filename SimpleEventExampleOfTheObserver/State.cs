@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ObserverEventsExample
 {
-    class State
+    enum State
     {
+        State1, State2, State3
     }
 }
