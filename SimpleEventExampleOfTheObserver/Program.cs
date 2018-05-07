@@ -6,7 +6,11 @@ namespace ObserverEventsExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Product myProduct = new Product();
+            myProduct.OnStateChange += newState => Console.WriteLine("State changed to " + newState);
+            myProduct.MyState = State.State3;
+
+            Console.ReadKey();
         }
     }
 }
